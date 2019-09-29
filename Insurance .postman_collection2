@@ -1,0 +1,532 @@
+{
+	"info": {
+		"_postman_id": "5d104fdb-50a6-4e31-82c1-4d6fbd96a049",
+		"name": "Insurance ",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create Insurance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peers\": [\n        \"peer0.org1.example.com\",\n        \"peer0.org2.example.com\"\n    ],\n    \"fcn\": \"createInsurance\",\n    \"args\": [\n        \"In123\",\n        \"Health\",\n        \"50000\",\n        \"Yearly\",\n        \"OBC\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getInsurancebyID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc?peer=peer0.org1.example.com&fcn=getInsuranceByID&args=%5B%22In123%22%5D",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getInsuranceByID"
+						},
+						{
+							"key": "args",
+							"value": "%5B%22In123%22%5D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getAllinsurance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc?peer=peer0.org1.example.com&fcn=getAllInsurance&args=%5B%22%22%5D",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getAllInsurance"
+						},
+						{
+							"key": "args",
+							"value": "%5B%22%22%5D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create Customer",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTMsInVzZXJuYW1lIjoiQmFycnkiLCJvcmdOYW1lIjoiT3JnMiIsImlhdCI6MTU2OTc2MjM1M30.W6g9SgHqJ10cY3LXysgZcHuhxGJObGvnFVGYfExeNJQ",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peers\": [\n        \"peer0.org1.example.com\",\n        \"peer0.org2.example.com\"\n    ],\n    \"fcn\": \"createCustomer\",\n    \"args\": [\n        \"Cu1234\",\n        \"Pranjul\",\n        \"pr@ex.com\",\n        \"27\",\n        \"male\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "transfer isurance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peers\": [\n        \"peer0.org1.example.com\",\n        \"peer0.org2.example.com\"\n    ],\n    \"fcn\": \"insuranceTransfer\",\n    \"args\": [\n        \"Cu1234\",\n        \"In1234\",\n        \"pl99\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "buy isurance",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"peers\": [\n        \"peer0.org1.example.com\",\n        \"peer0.org2.example.com\"\n    ],\n    \"fcn\": \"buyInsurance\",\n    \"args\": [\n        \"Cu1234\",\n        \"In1234\",\n        \"pl99\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getpolicy history",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc?peer=peer0.org1.example.com&fcn=getPolicytHistory&args=%5B%22In123%22%5D",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getPolicytHistory"
+						},
+						{
+							"key": "args",
+							"value": "%5B%22In123%22%5D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getCustomer by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc?peer=peer0.org1.example.com&fcn=getCustomerByID&args=%5B%22Cu1234%22%5D",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.org1.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getCustomerByID"
+						},
+						{
+							"key": "args",
+							"value": "%5B%22Cu1234%22%5D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getPolicy by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE1Njk3OTgzNTIsInVzZXJuYW1lIjoiSmltIiwib3JnTmFtZSI6Ik9yZzEiLCJpYXQiOjE1Njk3NjIzNTJ9.WxpqT5AXk7CwQr1DHssIOUAvSKrZPPb_Nw2R5wZXwPs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://13.126.228.156:4000/channels/mychannel/chaincodes/mycc?peer=peer0.org2.example.com&fcn=getInsuranceByPolicynumber&args=%5B%22pl99%22%5D",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"channels",
+						"mychannel",
+						"chaincodes",
+						"mycc"
+					],
+					"query": [
+						{
+							"key": "peer",
+							"value": "peer0.org2.example.com"
+						},
+						{
+							"key": "fcn",
+							"value": "getInsuranceByPolicynumber"
+						},
+						{
+							"key": "args",
+							"value": "%5B%22pl99%22%5D"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Insurer Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Insurer",
+							"type": "text"
+						},
+						{
+							"key": "orgName",
+							"value": "Org1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/users",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Customer Token",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "Customer",
+							"type": "text"
+						},
+						{
+							"key": "orgName",
+							"value": "Org2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://13.126.228.156:4000/users",
+					"protocol": "http",
+					"host": [
+						"13",
+						"126",
+						"228",
+						"156"
+					],
+					"port": "4000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
